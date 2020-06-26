@@ -8,6 +8,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 
+import java.util.Random;
+
 
 public class Controller {
 
@@ -270,8 +272,32 @@ public class Controller {
     }
 
     public void pseudoHexagonalSimulation() {
-        Alert alert =
-                new Alert(Alert.AlertType.ERROR, "Kamil nie rozumi polecenia");
-        alert.showAndWait();
+        Random rand = new Random();
+
+        for (int k = 0; k < iterations; k++) {
+
+            for (int i = 0; i < arraySize; i++) {
+                for (int j = 0; j < arraySize; j++) {
+
+                    if (array[i][j].oldState == 1) {
+                        if (rand.nextInt(3) == 1)
+                            moore(i, j);
+                        else
+                            vonNeuman(i, j);
+
+                    }
+                }
+
+            }
+
+            for (int i = 0; i < arraySize; i++) {
+                for (int j = 0; j < arraySize; j++) {
+                    array[i][j].oldState = array[i][j].state;
+                }
+            }
+
+        }
+        displayData();
+
     }
 }

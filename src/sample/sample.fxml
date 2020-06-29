@@ -8,18 +8,20 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button layoutX="941.0" layoutY="536.0" mnemonicParsing="false" onAction="#vonNeumanAlgorythm" prefHeight="39.0" prefWidth="103.0" text="Von Neuman" />
+      <Button layoutX="802.0" layoutY="229.0" mnemonicParsing="false" onAction="#zmienIlosc" prefHeight="39.0" prefWidth="150.0" text="zmienIlosc" />
       <Canvas fx:id="canvas" height="500.0" layoutX="36.0" layoutY="50.0" width="500.0" />
       <Label layoutX="816.0" layoutY="64.0" prefHeight="17.0" prefWidth="141.0" text="Ilosc komorek" />
-      <TextField fx:id="size" layoutX="796.0" layoutY="94.0" text="500" />
-      <Button fx:id="cleanBtn" layoutX="698.0" layoutY="536.0" mnemonicParsing="false" onAction="#cleanCanvas" prefHeight="39.0" prefWidth="83.0" text="Clean" />
-      <TextField fx:id="iterationsTextField" layoutX="796.0" layoutY="175.0" text="50" />
+      <TextField fx:id="size" layoutX="796.0" layoutY="94.0" text="70" />
+      <Button fx:id="cleanBtn" layoutX="733.0" layoutY="536.0" mnemonicParsing="false" onAction="#cleanCanvas" prefHeight="39.0" prefWidth="83.0" text="Clean" />
+      <TextField fx:id="iterationsTextField" layoutX="796.0" layoutY="175.0" text="1" />
       <Label layoutX="796.0" layoutY="140.0" prefHeight="17.0" prefWidth="141.0" text="Ilosc iteracji" />
-      <Button layoutX="825.0" layoutY="536.0" mnemonicParsing="false" onAction="#mooreAlgorythmSimulation" prefHeight="39.0" prefWidth="103.0" text="Moore" />
-      <Button layoutX="805.0" layoutY="222.0" mnemonicParsing="false" onAction="#confirmChanges" prefHeight="27.0" prefWidth="161.0" text="Zatwierdz zmiany" />
-      <Button layoutX="662.0" layoutY="480.0" mnemonicParsing="false" onAction="#hexagonalSymetricSimulation" prefHeight="39.0" prefWidth="193.0" text="heksagonalne symetryczne" />
-      <Button layoutX="870.0" layoutY="480.0" mnemonicParsing="false" onAction="#pentagonalSymetricSimulation" prefHeight="39.0" prefWidth="193.0" text="pentagonalne symetryczne" />
-      <Button layoutX="870.0" layoutY="431.0" mnemonicParsing="false" onAction="#heptagonalSymetricSimulation" prefHeight="39.0" prefWidth="193.0" text="heptagonalne symetryczne" />
-      <Button layoutX="662.0" layoutY="431.0" mnemonicParsing="false" onAction="#pseudoHexagonalSimulation" prefHeight="39.0" prefWidth="193.0" text="pseudo heksagonalne" />
+
+      <TextField fx:id="pointX" layoutX="791.0" layoutY="328.0" prefHeight="27.0" prefWidth="51.0" text="0" />
+      <TextField fx:id="pointY" layoutX="877.0" layoutY="328.0" prefHeight="27.0" prefWidth="51.0" text="0" />
+      <Label layoutX="781.0" layoutY="292.0" prefHeight="17.0" prefWidth="248.0" text="Wektor poczatkowy ziarna" />
+      <Label layoutX="755.0" layoutY="333.0" prefHeight="17.0" prefWidth="19.0" text="x:" />
+      <Label layoutX="857.0" layoutY="333.0" prefHeight="17.0" prefWidth="19.0" text="y:" />
+      <Button fx:id="startBtn" layoutX="632.0" layoutY="536.0" mnemonicParsing="false" onAction="#startMe" prefHeight="39.0" prefWidth="83.0" text="Start" />
+      <Button layoutX="963.0" layoutY="322.0" mnemonicParsing="false" onAction="#dodajZiarno" prefHeight="39.0" prefWidth="83.0" text="Dodaj ziarno" />
    </children>
 </AnchorPane>
